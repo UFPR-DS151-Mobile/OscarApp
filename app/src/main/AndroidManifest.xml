@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OscarApp">
         <activity
+            android:name=".activity.Diretor"
+            android:exported="false" />
+        <activity
+            android:name=".activity.Filmes"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ConfirmarVoto"
+            android:exported="false" />
+        <activity
             android:name=".MenuActivity"
             android:exported="false" />
         <activity
