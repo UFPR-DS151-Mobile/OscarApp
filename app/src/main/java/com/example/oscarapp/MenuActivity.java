@@ -10,7 +10,7 @@ import android.view.MenuItem;
 
 import com.example.oscarapp.activity.ConfirmarVoto;
 import com.example.oscarapp.activity.Diretor;
-import com.example.oscarapp.activity.Filmes;
+import com.example.oscarapp.activity.FilmesActivity;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -33,7 +33,7 @@ public class MenuActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case R.id.votarFilme:
-                Intent intentFilmes = new Intent(getApplicationContext(), Filmes.class);
+                Intent intentFilmes = new Intent(getApplicationContext(), FilmesActivity.class);
                 startActivity(intentFilmes);
                 break;
 

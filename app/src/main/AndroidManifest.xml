@@ -13,7 +13,7 @@
             android:name=".activity.Diretor"
             android:exported="false" />
         <activity
-            android:name=".activity.Filmes"
+            android:name=".activity.FilmesActivity"
             android:exported="false" />
         <activity
             android:name=".activity.ConfirmarVoto"
