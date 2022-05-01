@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -38,7 +39,6 @@ public class FilmesActivity extends AppCompatActivity {
         recyclerViewFilme = findViewById(R.id.recycleViewFilme);
 
         this.createFilme();
-        AdapterFilme adapterTeste = new AdapterFilme(listTestes, this);
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
 
@@ -47,34 +47,12 @@ public class FilmesActivity extends AppCompatActivity {
         recyclerViewFilme.addItemDecoration(
                 new DividerItemDecoration(this, LinearLayout.VERTICAL)
         );
-        recyclerViewFilme.setAdapter(adapterTeste);
 
-        recyclerViewFilme.addOnItemTouchListener(
-                new RecyclerItemClickListener(
-                        getApplicationContext(),
-                        recyclerViewFilme,
-                        new RecyclerItemClickListener.OnItemClickListener() {
-                            @Override
-                            public void onItemClick(View view, int position) {
 
-                            }
-
-                            @Override
-                            public void onLongItemClick(View view, int position) {
-
-                            }
-
-                            @Override
-                            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                                // não é necessário usar
-                            }
-                        }
-                )
-        );
     }
 
-    public void createFilme() {
 
+    public void createFilme() {
         Retrofit r = new Retrofit.Builder()
                 .baseUrl("http://wecodecorp.com.br/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -92,9 +70,34 @@ public class FilmesActivity extends AppCompatActivity {
 
                 listTestes.addAll(filmes);
 
-                AdapterFilme adapterFilme = new AdapterFilme(listTestes, recyclerViewFilme.getContext());
+                AdapterFilme adapterFilme = new AdapterFilme(listTestes);
                 recyclerViewFilme.setLayoutManager(new LinearLayoutManager(recyclerViewFilme.getContext()));
                 recyclerViewFilme.setAdapter(adapterFilme);
+
+                System.out.println("teste");
+
+                recyclerViewFilme.addOnItemTouchListener(
+                        new RecyclerItemClickListener(
+                                getApplicationContext(),
+                                recyclerViewFilme,
+                                new RecyclerItemClickListener.OnItemClickListener() {
+                                    @Override
+                                    public void onItemClick(View view, int position) {
+                                        Intent intent = new Intent(recyclerViewFilme.getContext(), DetalheItemActivity.class);
+                                        intent.putExtra("position", position);
+                                        startActivity(intent);
+                                    }
+                                    @Override
+                                    public void onLongItemClick(View view, int position) {
+
+                                    }
+                                    @Override
+                                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                        // não é necessário usar
+                                    }
+                                }
+                        )
+                );
             }
 
             @Override
@@ -102,10 +105,6 @@ public class FilmesActivity extends AppCompatActivity {
 
             }
         });
-
-        for (int i = 0; i<listTestes.size(); i++){
-            System.out.println(listTestes.get(i));
-        }
 
     }
 }

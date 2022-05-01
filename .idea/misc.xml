@@ -4,14 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/stark/OscarApp/app/src/main/res/layout/activity_confirmar_voto.xml" value="0.371875" />
+        <entry key="..\:/Users/stark/OscarApp/app/src/main/res/layout/activity_detalhes_filme.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/stark/OscarApp/app/src/main/res/layout/activity_diretor.xml" value="0.371875" />
         <entry key="..\:/Users/stark/OscarApp/app/src/main/res/layout/activity_filmes.xml" value="0.371875" />
         <entry key="..\:/Users/stark/OscarApp/app/src/main/res/layout/activity_main.xml" value="0.371875" />
         <entry key="..\:/Users/stark/OscarApp/app/src/main/res/layout/activity_main2.xml" value="0.371875" />
         <entry key="..\:/Users/stark/OscarApp/app/src/main/res/layout/activity_menu.xml" value="0.371875" />
         <entry key="..\:/Users/stark/OscarApp/app/src/main/res/layout/activity_votar_filme.xml" value="0.371875" />
+        <entry key="..\:/Users/stark/OscarApp/app/src/main/res/layout/adapter_list_filmes.xml" value="0.371875" />
         <entry key="..\:/Users/stark/OscarApp/app/src/main/res/layout/content_main.xml" value="0.371875" />
         <entry key="..\:/Users/stark/OscarApp/app/src/main/res/layout/content_main_menu.xml" value="0.371875" />
+        <entry key="..\:/Users/stark/OscarApp/app/src/main/res/layout/filmes_item.xml" value="0.371875" />
         <entry key="..\:/Users/stark/OscarApp/app/src/main/res/layout/fragment_first.xml" value="0.371875" />
         <entry key="..\:/Users/stark/OscarApp/app/src/main/res/layout/fragment_second.xml" value="0.371875" />
         <entry key="..\:/Users/stark/OscarApp/app/src/main/res/layout/main_menu.xml" value="0.371875" />
