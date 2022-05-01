@@ -1,6 +1,7 @@
 package com.example.oscarapp.conexao;
 
 import com.example.oscarapp.activity.DiretorActivity;
+import com.example.oscarapp.models.DiretorModel;
 import com.example.oscarapp.models.FilmeModel;
 
 import java.util.List;
@@ -13,5 +14,5 @@ public interface RetrofitConfig {
     @GET("ufpr/filme")
     Call<List<FilmeModel>> getFilme();
     @GET("ufpr/diretor")
-    Call<List<DiretorActivity>> getDiretor();
+    Call<List<DiretorModel>> getDiretor();
 }

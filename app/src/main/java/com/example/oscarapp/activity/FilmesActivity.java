@@ -29,7 +29,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class FilmesActivity extends AppCompatActivity {
 
     private RecyclerView recyclerViewFilme;
-    private List<FilmeModel> listTestes = new ArrayList<>();
+    public static List<FilmeModel> listTestes = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
