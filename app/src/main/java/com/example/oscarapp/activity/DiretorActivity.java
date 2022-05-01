@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.example.oscarapp.R;
 
-public class Diretor extends AppCompatActivity {
+public class DiretorActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

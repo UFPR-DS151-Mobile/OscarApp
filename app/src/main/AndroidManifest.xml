@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OscarApp">
         <activity
-            android:name=".activity.Diretor"
+            android:name=".activity.DiretorActivity"
             android:exported="false" />
         <activity
             android:name=".activity.FilmesActivity"

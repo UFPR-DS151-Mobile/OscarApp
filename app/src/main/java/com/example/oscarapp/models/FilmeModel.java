@@ -1,12 +1,12 @@
 package com.example.oscarapp.models;
 
-public class Filme {
+public class FilmeModel {
     private String nome, genero, imagem;
 
-    public Filme() {
+    public FilmeModel() {
     }
 
-    public Filme(String nome, String genero, String imagem) {
+    public FilmeModel(String nome, String genero, String imagem) {
         this.nome = nome;
         this.genero = genero;
         this.imagem = imagem;

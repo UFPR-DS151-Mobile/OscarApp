@@ -9,7 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.oscarapp.activity.ConfirmarVoto;
-import com.example.oscarapp.activity.Diretor;
+import com.example.oscarapp.activity.DiretorActivity;
 import com.example.oscarapp.activity.FilmesActivity;
 
 public class MenuActivity extends AppCompatActivity {
@@ -36,17 +36,14 @@ public class MenuActivity extends AppCompatActivity {
                 Intent intentFilmes = new Intent(getApplicationContext(), FilmesActivity.class);
                 startActivity(intentFilmes);
                 break;
-
             case R.id.votarDiretor:
-                Intent intentDiretor = new Intent(getApplicationContext(), Diretor.class);
+                Intent intentDiretor = new Intent(getApplicationContext(), DiretorActivity.class);
                 startActivity(intentDiretor);
                 break;
-
             case R.id.confirmarVoto:
                 Intent intentConfirmarVoto = new Intent(getApplicationContext(), ConfirmarVoto.class);
                 startActivity(intentConfirmarVoto);
                 break;
-
             case R.id.logout:
                 finish();
                 System.exit(0);
