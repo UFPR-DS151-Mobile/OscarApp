@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
@@ -22,6 +21,7 @@ import com.example.oscarapp.models.RecyclerItemClickListener;
 import com.example.oscarapp.models.UserModel;
 import com.example.oscarapp.tasks.LoginTask;
 import com.google.gson.JsonParser;
+import com.example.oscarapp.tasks.InitialActivity;
 
 import org.json.JSONObject;
 
@@ -31,7 +31,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -108,6 +107,8 @@ public class MainActivity extends AppCompatActivity {
 //                System.out.println("Resposta errada do login: "+ );
             }
         });
+        Intent telaInicial = new Intent(getApplicationContext(), InitialActivity.class);
+        startActivity(telaInicial);
 
           /* retrofit = new Retrofit.Builder()
                 .baseUrl("https://viacep.com.br/ws/01310100/json/")

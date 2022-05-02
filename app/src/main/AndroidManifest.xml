@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OscarApp">
         <activity
+            android:name=".tasks.InitialActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.DetalheItemActivity"
             android:exported="false" />
         <activity
