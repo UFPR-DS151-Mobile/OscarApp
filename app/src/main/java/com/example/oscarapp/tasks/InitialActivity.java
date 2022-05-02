@@ -1,9 +1,12 @@
-package com.example.oscarapp;
+package com.example.oscarapp.tasks;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.example.oscarapp.MenuActivity;
+import com.example.oscarapp.R;
 
 public class InitialActivity extends AppCompatActivity {
 

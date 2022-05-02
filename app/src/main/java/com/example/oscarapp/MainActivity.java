@@ -5,16 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.oscarapp.activity.ConfirmarVoto;
-import com.example.oscarapp.tasks.LoginTask;
+import com.example.oscarapp.tasks.InitialActivity;
 
 import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         EditText inputSenha = findViewById(R.id.inputLoginSenha);
 
         this.email = inputEmail.getText().toString();
-        this.senha = inputSenha.getText().toString();*/
+        this.senha = inputSenha.getText().toString();
 
         if (TextUtils.isEmpty(email) || TextUtils.isEmpty(senha)) {
             Toast.makeText(this, "Insira um usuario e senha!", Toast.LENGTH_SHORT).show();
