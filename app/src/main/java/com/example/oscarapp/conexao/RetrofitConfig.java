@@ -21,9 +21,6 @@ public interface RetrofitConfig {
     Call<List<FilmeModel>> getFilme();
     @GET("ufpr/diretor")
     Call<List<DiretorModel>> getDiretor();
-//    @POST("login")
-//    Call<UserModel> login(@Body UserModel user);
-
     @FormUrlEncoded
     @POST("login")
     Call<Object> login(

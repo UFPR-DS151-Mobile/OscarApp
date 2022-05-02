@@ -2,12 +2,15 @@ package com.example.oscarapp.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.oscarapp.MenuActivity;
+import com.example.oscarapp.Voto;
 import com.example.oscarapp.R;
 import com.example.oscarapp.models.FilmeModel;
 import com.squareup.picasso.Callback;
@@ -45,7 +48,13 @@ public class DetalheItemActivity extends AppCompatActivity {
     }
 
     public void votarFilme(View view){
-        Toast.makeText(this, "falta implementar o voto", Toast.LENGTH_SHORT).show();
+
+        final Voto voto = (Voto) getApplicationContext();
+        voto.setFilme(filme);
+
+        Intent menu = new Intent(getApplicationContext(), MenuActivity.class);
+        startActivity(menu);
+//        Toast.makeText(this, "falta implementar o voto", Toast.LENGTH_SHORT).show();
     }
 
 }

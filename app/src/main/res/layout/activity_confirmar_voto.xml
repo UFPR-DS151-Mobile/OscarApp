@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="134dp"
         android:layout_marginBottom="101dp"
-        android:onClick="confirmaVoto"
         android:text="Confirmar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -34,20 +33,21 @@
         android:id="@+id/imageViewConfirma"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="24dp"
         android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toBottomOf="@+id/textViewConfirmaDiretor"
         app:layout_constraintEnd_toEndOf="@+id/textViewFilmeNome"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textViewConfirmaFilme"
-        app:layout_constraintTop_toTopOf="@+id/textViewConfirmaFilme"
+        app:layout_constraintTop_toBottomOf="@+id/textViewConfirmaFilme"
+        app:layout_constraintVertical_bias="1.0"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/textViewConfirmaFilme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="133dp"
-        android:layout_marginTop="170dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="144dp"
         android:text="Filme:"
         android:textAlignment="center"
         android:textColor="@android:color/holo_blue_dark"
@@ -59,7 +59,7 @@
         android:id="@+id/textViewConfirmaDiretor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="292dp"
+        android:layout_marginBottom="244dp"
         android:text="Diretor:"
         android:textAlignment="center"
         android:textColor="@android:color/holo_blue_dark"
@@ -71,9 +71,12 @@
         android:id="@+id/textViewDiretorNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="4dp"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/imageViewConfirma"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewConfirma" />
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/textViewConfirmaDiretor"
+        app:layout_constraintTop_toTopOf="@+id/textViewConfirmaDiretor" />
 
     <TextView
         android:id="@+id/textViewFilmeNome"
@@ -81,7 +84,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="38dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/imageViewConfirma"
-        app:layout_constraintStart_toEndOf="@+id/textViewConfirmaFilme" />
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/textViewConfirmaFilme"
+        app:layout_constraintTop_toTopOf="@+id/textViewConfirmaFilme" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

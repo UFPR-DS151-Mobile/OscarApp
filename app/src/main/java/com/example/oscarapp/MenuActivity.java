@@ -51,8 +51,11 @@ public class MenuActivity extends AppCompatActivity {
                 startActivity(intentConfirmarVoto);
                 break;
             case R.id.logout:
-                finish();
-                System.exit(0);
+                Voto voto = (Voto) getApplicationContext();
+                voto.setDiretor(null);
+                voto.setFilme(null);
+                Intent main = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(main);
                 break;
         }
 

@@ -31,6 +31,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         this.output = findViewById(R.id.textViewOutput);
+
+//        System.out.println(anotherSingleton.value);
     }
 
     public void Login(View view) {
@@ -95,6 +98,8 @@ public class MainActivity extends AppCompatActivity {
                             output.setVisibility(View.VISIBLE);
                             output.setText(json.getString("message"));
                         } catch (Exception e) {
+                            output.setVisibility(View.VISIBLE);
+                            output.setText("Crendenciais inválidas");
                             System.out.println("Erro no response negativo: "+e.getMessage());
                         }
 //                    }
@@ -107,8 +112,8 @@ public class MainActivity extends AppCompatActivity {
 //                System.out.println("Resposta errada do login: "+ );
             }
         });
-        Intent telaInicial = new Intent(getApplicationContext(), InitialActivity.class);
-        startActivity(telaInicial);
+//        Intent telaInicial = new Intent(getApplicationContext(), InitialActivity.class);
+//        startActivity(telaInicial);
 
           /* retrofit = new Retrofit.Builder()
                 .baseUrl("https://viacep.com.br/ws/01310100/json/")

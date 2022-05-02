@@ -14,7 +14,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.example.oscarapp.MenuActivity;
 import com.example.oscarapp.R;
+import com.example.oscarapp.Voto;
 import com.example.oscarapp.conexao.RetrofitConfig;
 import com.example.oscarapp.models.DiretorModel;
 
@@ -53,7 +55,7 @@ public class DiretorActivity extends AppCompatActivity {
                 public void onResponse(Call<List<DiretorModel>> call, Response<List<DiretorModel>> response) {
                     RadioGroup radioGroup = findViewById(R.id.radioDiretor);
 
-                    List<DiretorModel> diretores = response.body();
+                    diretores = response.body();
                     int i = 0;
                     for (DiretorModel diretor : diretores) {
                             RadioButton radioButton = new RadioButton(DiretorActivity.this);
@@ -72,7 +74,20 @@ public class DiretorActivity extends AppCompatActivity {
 
         }
     public void votarDiretor(View view){
-        Toast.makeText(this, "falta implementar o voto", Toast.LENGTH_SHORT).show();
+        try {
+            RadioGroup radioGroup = findViewById(R.id.radioDiretor);
+            int selectedId = radioGroup.getCheckedRadioButtonId();
+            System.out.println("Id do botao: " + selectedId);
+            diretor = diretores.get(selectedId);
+
+            final Voto voto = (Voto) getApplicationContext();
+            voto.setDiretor(diretor);
+
+            Intent menu = new Intent(getApplicationContext(), MenuActivity.class);
+            startActivity(menu);
+        } catch(Exception e) {
+            Toast.makeText(this, "Escolha uma opção", Toast.LENGTH_SHORT).show();
+        }
     }
 
 }

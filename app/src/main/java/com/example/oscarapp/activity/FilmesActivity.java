@@ -29,12 +29,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class FilmesActivity extends AppCompatActivity {
 
     private RecyclerView recyclerViewFilme;
-    public static List<FilmeModel> listTestes = new ArrayList<>();
+    public static List<FilmeModel> listTestes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filmes);
+        listTestes = new ArrayList<>();
 
         recyclerViewFilme = findViewById(R.id.recycleViewFilme);
 
@@ -67,6 +68,7 @@ public class FilmesActivity extends AppCompatActivity {
             public void onResponse(Call<List<FilmeModel>> call, Response<List<FilmeModel>> response) {
 
                 List<FilmeModel> filmes = response.body();
+                System.out.println("Filmes: "+filmes);
 
                 listTestes.addAll(filmes);
 
