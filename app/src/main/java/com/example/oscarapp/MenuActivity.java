@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.example.oscarapp.activity.ConfirmarVoto;
 import com.example.oscarapp.activity.DiretorActivity;
@@ -14,12 +15,17 @@ import com.example.oscarapp.activity.FilmesActivity;
 
 public class MenuActivity extends AppCompatActivity {
 
+    String token;
+    TextView nome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-
+        Intent it = getIntent();
+//        Bundle params = it.getExtras();
+//        this.nome.setText(params.getString("nome"));
+//        this.token = params.getString("token");
     }
 
     @Override
