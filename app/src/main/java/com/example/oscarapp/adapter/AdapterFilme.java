@@ -70,6 +70,8 @@ public static class MyViewHolder extends RecyclerView.ViewHolder {
             } else {
                 holder.imagem.setImageResource(R.drawable.filme);
             }
+        holder.nome.setText(filme.getNome());
+        holder.genero.setText(filme.getGenero());
 
     }
 
