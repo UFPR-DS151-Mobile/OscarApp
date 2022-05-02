@@ -33,14 +33,14 @@ public class MainActivity extends AppCompatActivity {
         EditText inputSenha = findViewById(R.id.inputLoginSenha);
 
         this.email = inputEmail.getText().toString();
-        this.senha = inputSenha.getText().toString();
+        this.senha = inputSenha.getText().toString();*/
 
         if (TextUtils.isEmpty(email) || TextUtils.isEmpty(senha)) {
             Toast.makeText(this, "Insira um usuario e senha!", Toast.LENGTH_SHORT).show();
             return;
         }
-        Intent menuTeste = new Intent(getApplicationContext(), MenuActivity.class);
-        startActivity(menuTeste);
+        Intent telaInicial = new Intent(getApplicationContext(), InitialActivity.class);
+        startActivity(telaInicial);
 
           /* retrofit = new Retrofit.Builder()
                 .baseUrl("https://viacep.com.br/ws/01310100/json/")
